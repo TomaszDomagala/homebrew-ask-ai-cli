@@ -9,17 +9,17 @@ class Aai < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.3/ask-ai-cli_0.1.3_Darwin_arm64.tar.gz"
-      sha256 "3c3257abdcb6dac7fc60d61ae6f44a26b74f553eb2343157f9d7dedf375b8dd0"
+    if Hardware::CPU.intel?
+      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.3/ask-ai-cli_0.1.3_Darwin_x86_64.tar.gz"
+      sha256 "1b5ec7f93be472ebc6905316b567ae2b31af9fadbc118015bf937dc2bdf137af"
 
       def install
         bin.install "aai"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.3/ask-ai-cli_0.1.3_Darwin_x86_64.tar.gz"
-      sha256 "587697e7568ed6b196702b0040d5ead5633ab2f376269b664ff0b6a4e6f7447b"
+    if Hardware::CPU.arm?
+      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.3/ask-ai-cli_0.1.3_Darwin_arm64.tar.gz"
+      sha256 "176e3e6950be93eda75dae322af2fd42b67266bacb80c529988cac240295a850"
 
       def install
         bin.install "aai"
@@ -30,7 +30,7 @@ class Aai < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.3/ask-ai-cli_0.1.3_Linux_arm64.tar.gz"
-      sha256 "789b5941f264943d0feccbee37872569e2638fb402274f8b98cc948526a44491"
+      sha256 "17533ca31ed47be39b791f4a29702e89245b71c229117d7aec5f7d8283fea72b"
 
       def install
         bin.install "aai"
@@ -38,7 +38,7 @@ class Aai < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.3/ask-ai-cli_0.1.3_Linux_x86_64.tar.gz"
-      sha256 "9388b10519c32fc5afe9c306f6ca87a43223df8f2e18c5eac52b062575f46cf1"
+      sha256 "8896e3feb4759c78180fb351668cd6d0cee5eb1df14f2f412d238e5e864b4077"
 
       def install
         bin.install "aai"

@@ -5,21 +5,21 @@
 class Aai < Formula
   desc "Copilot but for the command line"
   homepage "https://github.com/TomaszDomagala/ask-ai-cli"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.4/ask-ai-cli_0.1.4_Darwin_x86_64.tar.gz"
-      sha256 "9796ebb0ea6c0730c0ee1b25929f03d5acfb38112a2b378cdc4d8cdf624c749f"
+      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.5/ask-ai-cli_0.1.5_Darwin_x86_64.tar.gz"
+      sha256 "503ca1fd9b8097f52ce546efe90c8ea2f323f57e4930abb37f0cc73f393a1a22"
 
       def install
         bin.install "aai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.4/ask-ai-cli_0.1.4_Darwin_arm64.tar.gz"
-      sha256 "6177d683a8bb6914b8fcd4e1ce6f587fcba3d7f5013ea4ffde53fbfdb2a29b80"
+      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.5/ask-ai-cli_0.1.5_Darwin_arm64.tar.gz"
+      sha256 "5673d9fba502e918b01d85144abf1d58f9f736fe561638042d9b2454e822dbb5"
 
       def install
         bin.install "aai"
@@ -29,16 +29,16 @@ class Aai < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.4/ask-ai-cli_0.1.4_Linux_arm64.tar.gz"
-      sha256 "2ed76e1aa472ca00602a8afa689132098650678c7d8540fcdcf262252c534f2d"
+      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.5/ask-ai-cli_0.1.5_Linux_arm64.tar.gz"
+      sha256 "f36715b417a81b400914e3f746a4c1f3ac25aa58ef275846455040a8a85e2387"
 
       def install
         bin.install "aai"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.4/ask-ai-cli_0.1.4_Linux_x86_64.tar.gz"
-      sha256 "0876b39651f7e75962ca05d5ad44cf062eed3f8bec7fafdb60c12ba0fdd85aab"
+      url "https://github.com/TomaszDomagala/ask-ai-cli/releases/download/v0.1.5/ask-ai-cli_0.1.5_Linux_x86_64.tar.gz"
+      sha256 "21e255dc31f5ba9ff45005c44a49f6e4cb3dd6e39d321dc18e4610a31ae6f4d6"
 
       def install
         bin.install "aai"
